@@ -1,19 +1,29 @@
 package model;
 
 import java.sql.Date;
+import java.time.LocalDate;
 
 public class Account {
     private int id;
     private String username;
     private String password;
     private String address;
-    private Date birthday;
+    private LocalDate birthday;
+
     private int id_role;
 
     public Account() {
     }
 
-    public Account(int id, String username, String password, String address, Date birthday, int id_role) {
+    public Account(String username, String password, String address, LocalDate birthday, int id_role) {
+        this.username = username;
+        this.password = password;
+        this.address = address;
+        this.birthday = birthday;
+        this.id_role = id_role;
+    }
+
+    public Account(int id, String username, String password, String address, LocalDate birthday, int id_role) {
         this.id = id;
         this.username = username;
         this.password = password;
@@ -54,11 +64,11 @@ public class Account {
         this.address = address;
     }
 
-    public Date getBirthday() {
+    public LocalDate getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Date birthday) {
+    public void setBirthday(LocalDate birthday) {
         this.birthday = birthday;
     }
 

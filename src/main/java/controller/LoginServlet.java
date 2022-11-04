@@ -27,12 +27,14 @@ public class LoginServlet extends HttpServlet {
         Account account = loginDAO.login(username, password);
         if (account != null){
             if (account.getId_role() == 1){
-                resp.sendRedirect("/user.jsp");
-            }else {
                 resp.sendRedirect("/admin.jsp");
+            }else {
+                resp.sendRedirect("/user.jsp");
             }
         }else {
-            resp.sendRedirect("/login");
+            req.setAttribute("mess", "Tài khoản hoặc mật khẩu không tồn tại");
+            RequestDispatcher requestDispatcher = req.getRequestDispatcher("/login.jsp");
+            requestDispatcher.forward(req,resp);
         }
     }
 }

@@ -11,6 +11,6 @@
     <title>Title</title>
 </head>
 <body>
-<h1>user</h1>
+<h1>account</h1>
 </body>
 </html>
