@@ -39,7 +39,7 @@ public class loginDAO {
 
     public static boolean checkUser(String username) {
         for (Account user : CRUD_Account.login()) {
-            if (username.equals(user)) {
+            if (username.equals(user.getUsername())) {
                 return false;
             }
         }

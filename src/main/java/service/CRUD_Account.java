@@ -24,7 +24,7 @@ public class CRUD_Account {
             ResultSet resultSet = preparedStatement.executeQuery();
 
 
-            if (resultSet.next()) {
+            while (resultSet.next()) {
                 int id = resultSet.getInt("id");
                 String username1 = resultSet.getString("username");
                 String password1 = resultSet.getString("password");
