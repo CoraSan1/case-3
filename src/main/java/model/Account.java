@@ -4,7 +4,6 @@ import java.sql.Date;
 import java.time.LocalDate;
 
 public class Account {
-    private int id;
     private String username;
     private String password;
     private String address;
@@ -15,7 +14,10 @@ public class Account {
     public Account() {
     }
 
-    public Account(String username, String password, String address, LocalDate birthday, int id_role) {
+
+
+    public Account( String username, String password, String address, LocalDate birthday, int id_role) {
+
         this.username = username;
         this.password = password;
         this.address = address;
@@ -23,22 +25,7 @@ public class Account {
         this.id_role = id_role;
     }
 
-    public Account(int id, String username, String password, String address, LocalDate birthday, int id_role) {
-        this.id = id;
-        this.username = username;
-        this.password = password;
-        this.address = address;
-        this.birthday = birthday;
-        this.id_role = id_role;
-    }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getUsername() {
         return username;

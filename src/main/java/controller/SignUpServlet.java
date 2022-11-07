@@ -53,9 +53,11 @@ public class SignUpServlet extends HttpServlet {
                 RequestDispatcher requestDispatcher = request.getRequestDispatcher("/login.jsp");
                 requestDispatcher.forward(request,response);
             } else {
-                response.sendRedirect("/login.jsp");
-            }
+                request.setAttribute("mess3", "Username đã tồn tại");
+                RequestDispatcher requestDispatcher = request.getRequestDispatcher("/login.jsp");
+                requestDispatcher.forward(request,response);            }
         }
 
     }
 }
+

@@ -6,14 +6,24 @@ public class Product {
     private String img;
     private double price;
 
+    private int amount;
+
     public Product() {
     }
 
-    public Product(int id, String name, String img, double price) {
+    public Product(String name, String img, double price, int amount) {
+        this.name = name;
+        this.img = img;
+        this.price = price;
+        this.amount = amount;
+    }
+
+    public Product(int id, String name, String img, double price, int amount) {
         this.id = id;
         this.name = name;
         this.img = img;
         this.price = price;
+        this.amount = amount;
     }
 
     public int getId() {
@@ -46,5 +56,13 @@ public class Product {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    public int getAmount() {
+        return amount;
+    }
+
+    public void setAmount(int amount) {
+        this.amount = amount;
     }
 }

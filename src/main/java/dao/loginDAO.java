@@ -1,7 +1,6 @@
 package dao;
 
 import model.Account;
-import service.CRUD_Account;
 
 import java.sql.*;
 import java.time.LocalDate;
@@ -19,14 +18,13 @@ public class loginDAO {
 
             Account account = null;
             if (resultSet.next()) {
-                int id = resultSet.getInt("id");
                 String username1 = resultSet.getString("username");
                 String password1 = resultSet.getString("password");
                 String address = resultSet.getString("address");
                 LocalDate birthday = resultSet.getDate("birthday").toLocalDate();
                 int id_role = resultSet.getInt("id_role");
 
-                account = new Account(id, username1, password1, address, birthday, id_role);
+                account = new Account(username1, password1, address, birthday, id_role);
             }
 
             return account;

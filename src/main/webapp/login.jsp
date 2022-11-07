@@ -134,6 +134,8 @@
                                     <p class="text-danger">${mess}</p>
                                 <p class="text-success">${mess1}</p>
                                 <p class="text-danger">${mess2}</p>
+                                <p class="text-danger">${mess3}</p>
+
                                 <div class="form-group">
                                     <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
                                 </div>
