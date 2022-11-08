@@ -14,10 +14,9 @@ import java.util.List;
 public class CRUD_cart {
     public static void newCart(String userName) {
         try {
-            String sql = "INSERT INTO cart (userName, status) VALUES (?,?);";
+            String sql = "INSERT INTO cart (username) VALUES (?);";
             PreparedStatement preparedStatement = CRUD_Account.connection.prepareStatement(sql);
             preparedStatement.setString(1, userName);
-            preparedStatement.setString(2, "1");
             preparedStatement.execute();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -48,7 +47,6 @@ public class CRUD_cart {
         String sql = "Select * from cart";
 
         try {
-            // tạo cái xe để đưa câu lệnh sql qua CSDL
             PreparedStatement preparedStatement = CRUD_Account.connection.prepareStatement(sql);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
@@ -102,7 +100,6 @@ public class CRUD_cart {
         String sql = "select iddetail_cart from detail_cart where idproduct = ?";
 
         try {
-            // tạo cái xe để đưa câu lệnh sql qua CSDL
             PreparedStatement preparedStatement = CRUD_Account.connection.prepareStatement(sql);
             preparedStatement.setInt(1, idproduct);
             ResultSet resultSet = preparedStatement.executeQuery();

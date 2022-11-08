@@ -1155,7 +1155,7 @@
           <span>Quản Lý</span></a>
         </li>
 
-        <li><a href="/login" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Đăng Xuất</span></a>
+        <li><a href="/LogoutServlet" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Đăng Xuất</span></a>
         </li>
       </ul>
     </nav>

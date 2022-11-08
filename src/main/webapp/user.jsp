@@ -1140,10 +1140,10 @@
 <!-- ======= Header ======= -->
 <header id="header">
     <div class="d-flex flex-column">
-        <div class="profile">
-            <img src="${User.getImg()}" alt="" class="img-fluid rounded-circle">
-            <h1 class="text-light"><a href="index.html">${User.getName()}</a></h1>
-        </div>
+<%--        <div class="profile">--%>
+<%--            <img src="${User.getImg()}" alt="" class="img-fluid rounded-circle">--%>
+<%--            <h1 class="text-light"><a href="index.html">${User.getName()}</a></h1>--%>
+<%--        </div>--%>
         <nav id="navbar" class="nav-menu navbar">
             <ul>
                 <li><a href="/ProductServlet_Show" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Trang Chủ</span></a>
@@ -1154,7 +1154,7 @@
                     <span>Giỏ Hàng</span></a>
                 </li>
 
-                <li><a href="/login" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Đăng Xuất</span></a>
+                <li><a href="/LogoutServlet" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Đăng Xuất</span></a>
                 </li>
             </ul>
         </nav>
@@ -1189,5 +1189,5 @@
 </footer>
 </body>
 </html>
-</body>
-</html>
+
+

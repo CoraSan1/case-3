@@ -1139,18 +1139,18 @@
 <!-- ======= Header ======= -->
 <header id="header">
     <div class="d-flex flex-column">
-        <div class="profile">
-            <img src="${User.getImg()}" alt="" class="img-fluid rounded-circle">
-            <h1 class="text-light"><a href="index.html">${User.getName()}</a></h1>
-        </div>
+<%--        <div class="profile">--%>
+<%--            <img src="${User.getImg()}" alt="" class="img-fluid rounded-circle">--%>
+<%--            <h1 class="text-light"><a href="index.html">${User.getName()}</a></h1>--%>
+<%--        </div>--%>
         <nav id="navbar" class="nav-menu navbar">
             <ul>
                 <li><a href="/AdminWeb_Servlet" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Trang Chủ</span></a>
                 </li>
                 <li><a href="/QLAccount" class="nav-link scrollto"><i class="bx bx-book-content"></i>
-                    <span>Quản Lý</span></a>
+                    <span>Quản Lý Account</span></a>
                 </li>
-                <li><a href="/login.jsp" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Đăng Xuất</span></a>
+                <li><a href="/LogoutServlet" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Đăng Xuất</span></a>
                 </li>
             </ul>
         </nav>
@@ -1168,9 +1168,8 @@
     <table class="table">
         <thead>
         <tr>
-            <th style=" width: 50px ; text-align: center">idProduct</th>
-            <th style="width: 380px ; text-align: center">IMG</th>
             <th style="width: 100px ;text-align: center">nameProduct</th>
+            <th style="width: 380px ; text-align: center">IMG</th>
             <th style=" width: 50px ; text-align: center">price</th>
             <th style=" width: 50px ; text-align: center">amount</th>
 
@@ -1179,15 +1178,16 @@
         <tbody>
         <form method="get" action="/AddProduct">
             <tr>
-                <td>
-                    <p>Thêm Sản Phẩm</p>
-                </td>
+<%--                <td>--%>
+<%--                    <p>Thêm Sản Phẩm</p>--%>
+<%--                </td>--%>
+    <td>
+        <input name="name" style=" width: 100px ;">
+    </td>
                 <td>
                     <input name="img" style=" width: 380px ;">
                 </td>
-                <td>
-                    <input name="name" style=" width: 100px ;">
-                </td>
+
                 <td>
                     <input name="price" style=" width: 50px ; text-align: center">
                 </td>
@@ -1203,16 +1203,17 @@
         <c:forEach items="${product}" var="sp">
             <form action="/EditProduct" method="get">
                 <tr>
-                    <td>
-                        <input name="id" value="${sp.id}" readonly
-                               style=" width: 50px ; text-align: center">
-                    </td>
+<%--                    <td>--%>
+<%--                        <input name="id" value="${sp.id}" readonly--%>
+<%--                               style=" width: 50px ; text-align: center">--%>
+<%--                    </td>--%>
+    <td>
+        <input name="name" value="${sp.name}" style=" width: 100px ;">
+    </td>
                     <td>
                         <input name="img" value="${sp.img}" style=" width: 380px ;">
                     </td>
-                    <td>
-                        <input name="name" value="${sp.name}" style=" width: 100px ;">
-                    </td>
+
                     <td>
                         <input name="price" value="${sp.price}" style=" width: 50px ; text-align: center">
                     </td>

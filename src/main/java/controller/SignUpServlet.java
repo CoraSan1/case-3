@@ -1,5 +1,6 @@
 package controller;
 
+import dao.CRUD_cart;
 import dao.loginDAO;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
@@ -48,6 +49,7 @@ public class SignUpServlet extends HttpServlet {
                 account.setBirthday(birthday);
                 account.setId_role(2);
                 loginDAO.sign_up(account);
+                CRUD_cart.newCart(account.getUsername());
 
                 request.setAttribute("mess1", "Đăng ký thành công");
                 RequestDispatcher requestDispatcher = request.getRequestDispatcher("/login.jsp");
